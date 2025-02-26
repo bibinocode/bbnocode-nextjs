@@ -1,11 +1,11 @@
 {
-	"name": "@repo/config",
+	"name": "@bbnocode/config",
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
 		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@repo/tsconfig": "workspace:*"
+		"@bbnocode/tsconfig": "workspace:*"
 	}
 }

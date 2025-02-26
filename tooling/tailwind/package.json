@@ -1,5 +1,5 @@
 {
-	"name": "@repo/tailwind",
+	"name": "@bbnocode/tailwind",
 	"version": "0.0.0",
 	"main": "theme.css",
 	"private": true,

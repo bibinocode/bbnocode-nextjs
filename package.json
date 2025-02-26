@@ -12,7 +12,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@changesets/cli": "^2.28.1",
-		"@repo/tsconfig": "workspace:*",
+		"@bbnocode/tsconfig": "workspace:*",
 		"@types/node": "^22.13.5",
 		"turbo": "^2.4.4",
 		"typescript": "5.7.3"
