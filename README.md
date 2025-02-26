@@ -1,84 +1,96 @@
-# Turborepo starter
+# bbnocode-nextjs
 
-This Turborepo starter is maintained by the Turborepo core team.
+bbnocode-nextjs 是一个快速构建个人sass的nextjs模版项目
 
-## Using this example
 
-Run the following command:
+## 技术栈
 
-```sh
-npx create-turbo@latest
+- `Biome`: 用于检查格式化工具
+- `@changesets/cli`:  用来管理版本变更,生成变更文件
+
+
+##  Biome 配置说明
+
+Biome 是一个高性能的 JavaScript/TypeScript 工具链，包含代码格式化、lint 检查等功能。以下是配置文件的详细说明。
+
+
+```json
+"formatter": {
+  "enabled": true,
+  "useEditorconfig": true
+}
 ```
 
-## What's inside?
+- `enabled`: 启用代码格式化功能
+- `useEditorconfig`: 使用 .editorconfig 文件中的配置
 
-This Turborepo includes the following packages/apps:
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
+```json
+"linter": {
+  "enabled": true,
+  "rules": {
+   "recommended": true,
+   "suspicious": {
+    "noExplicitAny": "off",
+    "noArrayIndexKey": "off"
+   },
+   "complexity": {
+    "noForEach": "off"
+   },
+   "correctness": {
+    "useExhaustiveDependencies": "off",
+    "noUnusedImports": "error",
+    "noUnusedFunctionParameters": "warn"
+   },
+   "style": {
+    "noUnusedTemplateLiteral": {
+     "level": "error",
+     "fix": "safe"
+    },
+    "noNonNullAssertion": "warn",
+    "useBlockStatements": "warn"
+   }
+  }
+ }
 
 ```
-cd my-turborepo
-pnpm dev
-```
 
-### Remote Caching
+可疑代码规则 (suspicious)
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+- `noExplicitAny: "off"` - 允许使用 `any` 类型
+- `noArrayIndexKey: "off"` - 允许使用数组索引作为 React key
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+复杂度规则 (complexity)
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+- `noForEach: "off"` - 允许使用 `forEach` 方法
 
-```
-cd my-turborepo
-npx turbo login
-```
+正确性规则 (correctness)
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+- `useExhaustiveDependencies: "off"` - 关闭依赖项完整性检查
+- `noUnusedImports: "error"` - 禁止未使用的导入
+- `noUnusedFunctionParameters: "warn"` - 警告未使用的函数参数
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+样式规则 (style)
 
-```
-npx turbo link
-```
+- `noUnusedTemplateLiteral: "error"` - 禁止未使用的模板字符串
+- `noNonNullAssertion: "warn"` - 警告使用非空断言操作符
+- `useBlockStatements: "warn"` - 建议使用代码块语句
 
-## Useful Links
+导入组织规则 (organizeImports)
 
-Learn more about the power of Turborepo:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+文件配置 (files)
+
+`ignore`: 配置需要忽略的文件路径
+
+
+(javascript)
+
+`jsxRuntime`: 配置 JSX 运行时，可选值为 `classic` 和 `automatic`
+
+版本控制 (vcs)
+
+- `enabled`: 启用版本控制功能
+- `clientKind`: 版本控制工具
+- `defaultBranch`: 默认分支
+- `useIgnoreFile`: 使用 .gitignore 文件
