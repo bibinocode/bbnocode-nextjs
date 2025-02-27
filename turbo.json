@@ -22,6 +22,9 @@
 		},
 		"export": {
 			"outputs": ["out/**"]
+		},
+		"changelog": {
+			"cache": false
 		}
 	}
 }

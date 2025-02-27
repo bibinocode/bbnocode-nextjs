@@ -1,0 +1,16 @@
+{
+	"name": "@bbnocode/scripts",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.13.5",
+		"tsx": "^4.19.3",
+		"@bbnocode/tsconfig": "workspace:*",
+		"conventional-changelog-cli": "^5.0.0"
+	},
+	"scripts": {
+		"changelog": "tsx ./src/generate-changelog.ts",
+		"changelog:all": "tsx ./src/generate-changelog.ts --all",
+		"changelog:filter": "tsx ./src/generate-changelog.ts --filter"
+	},
+	"private": true
+}
