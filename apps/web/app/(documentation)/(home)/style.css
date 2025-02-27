@@ -1,0 +1,51 @@
+.cloud-1 {
+	position: absolute;
+	left: 576px;
+	top: 298.63px;
+	width: 384px;
+	height: 384px;
+	border-radius: 9999px;
+	mix-blend-mode: multiply;
+	opacity: 0.3;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #FEF08A;
+	filter: blur(64px);
+}
+
+.cloud-2 {
+	position: absolute;
+	left: 480px;
+	top: 383.95px;
+	width: 384px;
+	height: 384px;
+	border-radius: 9999px;
+	mix-blend-mode: multiply;
+	opacity: 0.3;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #BFDBFE;
+	filter: blur(64px);
+}
+
+.cloud-3 {
+	position: absolute;
+	left: 696px;
+	top: 341.28px;
+	width: 384px;
+	height: 384px;
+	border-radius: 9999px;
+	mix-blend-mode: multiply;
+	opacity: 0.3;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #E9D5FF;
+	filter: blur(64px);
+}
+
+.cloud-4 {
+	position: absolute;
+	left: 360px;
+	top: 255.95px;
+	width: 384px;
+	height: 384px;
+	border-radius: 9999px;
+	mix-blend-mode: multiply;
+	opacity: 0.3;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #FBCFE8;
+	filter: blur(64px);
+}
