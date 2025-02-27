@@ -2,15 +2,10 @@
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
 		"jsx": "preserve",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"module": "esnext",
-		"noEmit": true,
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"target": "es5"
+		"lib": ["dom", "DOM.Iterable", "ESNext"],
+		"module": "ESNext",
+		"plugins": [{ "name": "next" }],
+		"target": "ES5"
 	},
 	"display": "Next.js",
 	"exclude": ["node_modules"],
