@@ -12,7 +12,8 @@
 		"version": "changeset version",
 		"release": "changeset publish",
 		"changelog:all": "@bbnocode/scripts changelog:all",
-		"changelog:filter": "pnpm --filter @bbnocode/scripts changelog:filter"
+		"changelog:filter": "pnpm --filter @bbnocode/scripts changelog:filter",
+		"shadcn-ui": "pnpm --filter @bbnocode/web shadcn-ui"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",

@@ -1,22 +1,22 @@
 {
-  "extends": "@bbnocode/tsconfig/nextjs.json",
-  "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {},
-    "noEmit": true
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/.cjs",
-    "**/.mjs",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"extends": "@bbnocode/tsconfig/nextjs.json",
+	"compilerOptions": {
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"paths": {
+			"@ui/*": ["./modules/ui/*"]
+		},
+		"noEmit": true
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"**/.cjs",
+		"**/.mjs",
+		".next/types/**/*.ts"
+	],
+	"exclude": ["node_modules"]
 }
