@@ -35,7 +35,7 @@
 	opacity: 0.3;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #E9D5FF;
 	filter: blur(64px);
-}
+} 
 
 .cloud-4 {
 	position: absolute;

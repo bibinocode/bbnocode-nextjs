@@ -1,26 +1,26 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-	"formatter":{
+	"formatter": {
 		"enabled": true,
 		"useEditorconfig": true
 	},
-	"linter":{
+	"linter": {
 		"enabled": true,
-		"rules":{
+		"rules": {
 			"recommended": true,
-			"suspicious":{
-				"noExplicitAny":"off",
-				"noArrayIndexKey":"off"
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "off"
 			},
-			"complexity":{
-				"noForEach":"off"
+			"complexity": {
+				"noForEach": "off"
 			},
-			"correctness":{
-				"useExhaustiveDependencies":"off",
-				"noUnusedImports":"error",
-				"noUnusedFunctionParameters":"warn"
+			"correctness": {
+				"useExhaustiveDependencies": "off",
+				"noUnusedImports": "error",
+				"noUnusedFunctionParameters": "warn"
 			},
-			"style":{
+			"style": {
 				"noUnusedTemplateLiteral": {
 					"level": "error",
 					"fix": "safe"
@@ -30,19 +30,24 @@
 			}
 		}
 	},
-	"organizeImports":{
+	"organizeImports": {
 		"enabled": true
 	},
-	"files":{
-		"ignore":[]
+	"files": {
+		"ignore": []
 	},
-	"javascript":{
-		"jsxRuntime":"reactClassic"
+	"javascript": {
+		"jsxRuntime": "reactClassic"
 	},
-	"vcs":{
+	"css": {
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"vcs": {
 		"enabled": true,
-		"clientKind":"git",
-		"defaultBranch":"main",
+		"clientKind": "git",
+		"defaultBranch": "main",
 		"useIgnoreFile": true
 	}
 }
