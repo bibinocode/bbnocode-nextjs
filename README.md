@@ -94,3 +94,36 @@ Biome 是一个高性能的 JavaScript/TypeScript 工具链，包含代码格式
 - `clientKind`: 版本控制工具
 - `defaultBranch`: 默认分支
 - `useIgnoreFile`: 使用 .gitignore 文件
+
+
+## changesets 说明
+
+changesets 是一个用于管理版本变更的工具，它可以自动生成变更文件，并将变更文件提交到版本控制系统中。以下是配置文件的详细说明。
+
+```json
+{
+  "scripts": {
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
+  }
+}
+```
+
+- `changeset`: 运行 changeset 命令，生成变更文件
+- `version`: 运行 changeset version 命令，更新变更文件中的版本号
+- `release`: 运行 changeset publish 命令，将变更文件提交到版本控制系统中
+
+```bash
+# 1. 创建变更集
+pnpm changeset
+
+# 2. 选择要更新的包和版本类型（patch/minor/major）
+# 3. 添加变更说明
+
+# 4. 更新版本号
+pnpm version
+
+# 5. 发布到 npm
+pnpm release
+```
