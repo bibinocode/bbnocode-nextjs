@@ -1,4 +1,4 @@
-import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import { DocsLayout } from "fumadocs-ui/layouts/notebook";
 import type { PropsWithChildren } from "react";
 import { docsSource } from "../../../../docs-source";
 

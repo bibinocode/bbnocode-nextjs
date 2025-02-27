@@ -1,4 +1,5 @@
 import { MDXContent } from "@content-collections/mdx/react";
+import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 import { File, Files, Folder } from "fumadocs-ui/components/files";
 import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { Step, Steps } from "fumadocs-ui/components/steps";
@@ -51,6 +52,11 @@ export default async function Page(props: {
 							Steps,
 							Tab,
 							Tabs,
+							pre: ({ ref: _ref, ...props }) => (
+								<CodeBlock keepBackground {...props}>
+									<Pre>{props.children}</Pre>
+								</CodeBlock>
+							),
 							img: () => (
 								<ImageZoom
 									{...(props as any)}

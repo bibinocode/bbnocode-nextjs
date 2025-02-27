@@ -1,6 +1,7 @@
 {
 	"extends": "@bbnocode/tsconfig/nextjs.json",
 	"compilerOptions": {
+		"target": "esnext",
 		"plugins": [
 			{
 				"name": "next"
@@ -9,6 +10,7 @@
 		"paths": {
 			"@ui/*": ["./modules/ui/*"], // 组件库路径别名
 			"@shared/*": ["./modules/shared/*"], // 共享模块路径别名
+			"@actions/*": ["./modules/actions/*"], // 共享模块路径别名
 			"content-collections": ["./.content-collections/generated"] // 文档生成路径集合
 		},
 		"noEmit": true
@@ -18,6 +20,7 @@
 		"**/*.tsx",
 		"**/.cjs",
 		"**/.mjs",
+		"**/*.mdx",
 		".next/types/**/*.ts"
 	],
 	"exclude": ["node_modules"]
