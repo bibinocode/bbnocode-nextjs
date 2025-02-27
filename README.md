@@ -7,7 +7,7 @@ bbnocode-nextjs 是一个快速构建个人sass的nextjs模版项目
 
 - `Biome`: 用于检查格式化工具
 - `@changesets/cli`:  用来管理版本变更,生成变更文件
-
+- `Fumadocs`: 用于做mdx文档站点
 
 ##  Biome 配置说明
 
