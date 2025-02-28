@@ -16,9 +16,12 @@ const robotoFont = Roboto({
 	variable: "--font-roboto",
 });
 
-export function Document({ children }: PropsWithChildren) {
+export function Document({
+	children,
+	lang,
+}: PropsWithChildren<{ lang: string }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang={lang} suppressHydrationWarning>
 			<body
 				className={cn(
 					"min-h-screen font-sans",

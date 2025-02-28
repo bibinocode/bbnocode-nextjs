@@ -1,0 +1,9 @@
+{
+	"name": "@bbnocode/i18n",
+	"private": true,
+	"version": "0.0.0",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.13.5"
+	}
+}

@@ -1,3 +1,4 @@
+import { config as Config } from "@bbnocode/config";
 import { MDXContent } from "@content-collections/mdx/react";
 import { CodeBlock, Pre } from "fumadocs-ui/components/codeblock";
 import { File, Files, Folder } from "fumadocs-ui/components/files";
@@ -8,7 +9,7 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import { DocsBody, DocsPage } from "fumadocs-ui/page";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { docsSource } from "../../../../docs-source";
+import { docsSource } from "../../../../../docs-source";
 
 export default async function Page(props: {
 	params: Promise<{ path?: string[] }>;
@@ -72,14 +73,17 @@ export default async function Page(props: {
 }
 
 export async function generateStaticParams() {
-	return docsSource.generateParams();
+	return docsSource.getPages().flatMap((page) => ({
+		path: page.slugs,
+		locale: page.locale ?? Config.i18n.defaultLocale,
+	}));
 }
 
 export async function generateMetadata(props: {
-	params: Promise<{ path?: string[] }>;
+	params: Promise<{ path?: string[]; lng: string }>;
 }) {
 	const params = await props.params;
-	const page = docsSource.getPage(params.path);
+	const page = docsSource.getPage(params.path, params.lng);
 
 	if (!page) notFound();
 

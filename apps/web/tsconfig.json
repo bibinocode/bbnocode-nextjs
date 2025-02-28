@@ -11,7 +11,8 @@
 			"@ui/*": ["./modules/ui/*"], // 组件库路径别名
 			"@shared/*": ["./modules/shared/*"], // 共享模块路径别名
 			"@actions/*": ["./modules/actions/*"], // 共享模块路径别名
-			"content-collections": ["./.content-collections/generated"] // 文档生成路径集合
+			"content-collections": ["./.content-collections/generated"], // 文档生成路径集合
+			"@i18n":["./modules/i18n/index.ts"], // 翻译文件
 		},
 		"noEmit": true
 	},
