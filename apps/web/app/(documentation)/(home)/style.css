@@ -1,9 +1,10 @@
 .cloud-1 {
 	position: absolute;
-	left: 576px;
-	top: 298.63px;
-	width: 384px;
-	height: 384px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 20vw;
+	height: 20vw;
 	border-radius: 9999px;
 	mix-blend-mode: multiply;
 	opacity: 0.3;
@@ -13,10 +14,11 @@
 
 .cloud-2 {
 	position: absolute;
-	left: 480px;
-	top: 383.95px;
-	width: 384px;
-	height: 384px;
+	left: 45%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	width: 20vw;
+	height: 20vw;
 	border-radius: 9999px;
 	mix-blend-mode: multiply;
 	opacity: 0.3;
@@ -26,26 +28,73 @@
 
 .cloud-3 {
 	position: absolute;
-	left: 696px;
-	top: 341.28px;
-	width: 384px;
-	height: 384px;
+	left: 55%;
+	top: 53%;
+	transform: translate(-50%, -50%);
+	width: 20vw;
+	height: 20vw;
 	border-radius: 9999px;
 	mix-blend-mode: multiply;
 	opacity: 0.3;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #E9D5FF;
 	filter: blur(64px);
-} 
+}
 
 .cloud-4 {
 	position: absolute;
-	left: 360px;
-	top: 255.95px;
-	width: 384px;
-	height: 384px;
+	left: 40%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	width: 20vw;
+	height: 20vw;
 	border-radius: 9999px;
 	mix-blend-mode: multiply;
 	opacity: 0.3;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #FBCFE8;
 	filter: blur(64px);
+}
+
+
+.info-container {
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.icon-container__title {
+	font-family: var(--font-roboto);
+	font-weight: bold;
+	line-height: 60px;
+	letter-spacing: 0px;
+	color: #111827;
+	font-size:60px;
+	text-align:center;
+	margin-bottom: 32px;
+}
+
+.icon-container__desc-bold {
+	font-family: var(--font-roboto);
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 39px;
+	text-align: center;
+	letter-spacing: 0px;
+	color: #374151;
+	margin-bottom: 8px;
+}
+
+.icon-container__desc-normal {
+	font-family: var(--font-roboto);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 28px;
+	text-align: center;
+	letter-spacing: 0px;
+	color: #4B5563;
 }

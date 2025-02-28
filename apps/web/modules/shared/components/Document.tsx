@@ -1,6 +1,6 @@
 import { cn } from "@ui/lib";
 import { ThemeProvider } from "next-themes";
-import { Poppins } from "next/font/google";
+import { Poppins, Roboto } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import type { PropsWithChildren } from "react";
 
@@ -10,10 +10,22 @@ const sansFont = Poppins({
 	variable: "--font-sans",
 });
 
+const robotoFont = Roboto({
+	subsets: ["latin"],
+	weight: ["100", "300", "400", "500", "700", "900"],
+	variable: "--font-roboto",
+});
+
 export function Document({ children }: PropsWithChildren) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={cn("min-h-screen font-sans", sansFont.variable)}>
+			<body
+				className={cn(
+					"min-h-screen font-sans",
+					sansFont.variable,
+					robotoFont.variable,
+				)}
+			>
 				<NextTopLoader />
 				<ThemeProvider
 					attribute="class"

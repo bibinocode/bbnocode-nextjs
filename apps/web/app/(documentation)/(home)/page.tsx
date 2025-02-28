@@ -6,6 +6,16 @@ export default function Home() {
 			<div className="cloud-2" />
 			<div className="cloud-3" />
 			<div className="cloud-4" />
+			{/* 个人介绍 */}
+			<div className="info-container">
+				<h1 className="icon-container__title">嗨，我是阿逼 👋🏻</h1>
+				<p className="icon-container__desc-bold">
+					Web 全栈开发者 · 极客爱好者 · 编程探索者
+				</p>
+				<p className="icon-container__desc-normal">
+					我喜欢学习新的技术和框架，目前正在寻找新的工作机会 👨‍💻
+				</p>
+			</div>
 		</div>
 	);
 }
