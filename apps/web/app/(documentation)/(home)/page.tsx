@@ -1,3 +1,4 @@
+import { Button } from "@ui/components/button";
 import "./style.css";
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 				<p className="icon-container__desc-normal">
 					我喜欢学习新的技术和框架，目前正在寻找新的工作机会 👨‍💻
 				</p>
+				<Button className="info-container__button">了解更多</Button>
 			</div>
 		</div>
 	);

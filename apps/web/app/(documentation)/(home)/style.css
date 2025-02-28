@@ -97,4 +97,17 @@
 	text-align: center;
 	letter-spacing: 0px;
 	color: #4B5563;
+	margin-bottom: 32px;
+}
+
+.info-container__button {
+	border-radius: 4px;
+	opacity: 1;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #111827;
+	box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap: 0 8px;
+	padding: 10px 32px;
 }
